@@ -7,7 +7,7 @@
     /* -webkit-box-shadow:0 5px 18px 0 gray;
     box-shadow:0 5px 18px 0 gray; */
     border-radius: 10px;
-    width: 400px;
+    width: 350px;
 }
 
 .banner-movie{
@@ -29,8 +29,13 @@
 
 .content-movie-card{
     padding: 0px 15px;
+    overflow: hidden;
+    width: 100%;
 }
 
-.content-movie-card h2{
+.content-movie-card h2 {
     margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

@@ -5,14 +5,14 @@ interface MovieCardProps {
     title: string;
 }
 
-function MovieCard({srcImg, title}: MovieCardProps) {
-  return (
+const MovieCard: React.FC<MovieCardProps> = ({ srcImg, title }) => {
+    return (
     <div className="movie-card">
       <div className='banner-movie img'>
         <img src={srcImg} alt="Banner"/>
       </div>
       <div className='content-movie-card'>
-        <h2>{title}</h2>
+        <h2 className='subtitle-main'>{title}</h2>
         <button className='btn-default'>Saiba Mais</button>
       </div>
 
