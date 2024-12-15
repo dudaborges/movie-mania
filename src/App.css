@@ -25,3 +25,12 @@ video {
   transform: translate(-50%, -50%);
   filter: brightness(0.6);
 }
+
+.btn-default{
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.082);
+  cursor: pointer;
+}

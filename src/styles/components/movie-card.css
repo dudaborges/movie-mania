@@ -1,0 +1,36 @@
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    /* -webkit-box-shadow:0 5px 18px 0 gray;
+    box-shadow:0 5px 18px 0 gray; */
+    border-radius: 10px;
+    width: 400px;
+}
+
+.banner-movie{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.movie-card img{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    filter: brightness(0.8);
+}
+
+.movie-card .banner-movie:hover img{
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+
+.content-movie-card{
+    padding: 0px 15px;
+}
+
+.content-movie-card h2{
+    margin-bottom: 10px;
+}

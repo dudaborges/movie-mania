@@ -1,5 +1,6 @@
 .search-container {
     width: 500px;
+    border: none;
 }
 
 input#search-bar {
@@ -11,9 +12,9 @@ input#search-bar {
     box-sizing: content-box;
     border-radius: 10px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    outline: none;
 }
 input#search-bar:focus {
-    border: 1px solid #292828;
     transition: 0.35s ease;
     color: #121212;
 }

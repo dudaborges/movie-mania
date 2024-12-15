@@ -1,4 +1,5 @@
 import './App.css'
+import Catalog from './sections/Catalog'
 import Home from './sections/Home'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <Home/>   
+      <Catalog/>
     </>
   )
 }
