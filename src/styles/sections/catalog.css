@@ -10,3 +10,25 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
+
+.pagination-container{
+    padding: 30px;
+}
+
+.pagination-btn{
+    padding: 5px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    border: none;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-color: rgb(231, 231, 231);
+    transition: 0.5s;
+}
+
+.pagination-btn:hover{
+    transform: scale(1.1);
+    background-color: white;
+}

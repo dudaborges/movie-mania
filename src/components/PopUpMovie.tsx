@@ -4,6 +4,7 @@ import '../styles/components/popup-movie.css';
 interface PopUpMovieProps {
   movie: {
     title: string;
+    poster_path: string;
     vote_average: number;
     overview: string;
     release_date: string;

@@ -9,7 +9,7 @@ interface MovieCardProps {
 const MovieCard: React.FC<MovieCardProps> = ({ srcImg, title, onShowPopup }) => {
   return (
     <div className="movie-card">
-      <div className="banner-movie img">
+      <div className="banner-movie img" onClick={onShowPopup}>
         <img src={srcImg} alt="Banner" />
       </div>
       <div className="content-movie-card">

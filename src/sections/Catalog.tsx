@@ -9,6 +9,13 @@ const Catalog: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null); 
   const [isPopupVisible, setPopupVisible] = useState(false); 
+  const [itensPerPage] = useState(10)
+  const [currentPage, setCurrentPage] = useState(0)
+
+  const pages = Math.ceil(movies.length / itensPerPage) 
+  const startIndex = currentPage * itensPerPage
+  const endIndex = startIndex + itensPerPage
+  const currentMovies = movies.slice(startIndex, endIndex)
 
   useEffect(() => {
     const getMovies = async () => {
@@ -30,7 +37,7 @@ const Catalog: React.FC = () => {
   return (
     <section id="catalog-section" className="padding-50">
       <div className="container-catalog">
-        {movies.map((movie) => (
+        {currentMovies.map((movie) => (
           <MovieCard
             key={movie.id}
             srcImg={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -45,6 +52,26 @@ const Catalog: React.FC = () => {
           onClose={handleClosePopup} 
         />
       )}
+    <div className='pagination-container flex-center flex__gap-10'>
+    {Array.from(Array(pages), (item, index) => {
+        return (
+            <button
+            className='pagination-btn'
+            value={index}
+            onClick={(e) => {
+                setCurrentPage(Number((e.target as HTMLButtonElement).value));
+                const section = document.getElementById('home-section');
+                if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }}
+            >
+            {index}
+            </button>
+        );
+    })}
+
+    </div>
     </section>
   );
 };
