@@ -1,0 +1,366 @@
+/* :root{
+  --primary-color: ;
+} */
+
+*, 
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font-size: 100%;
+  list-style-type: none;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+a{
+  color: #121212;
+  text-decoration: none;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex__align-start{
+  align-items: start;
+}
+
+.flex__align-end{
+  align-items: flex-end;
+}
+
+.flex__justify-start{
+  justify-content: start;
+}
+
+.flex_justify_around{
+  justify-content: space-around;
+}
+
+.full-screen{
+  width: 100%;
+  height: 100vh;
+}
+
+.half-screen{
+  width: 50%;
+}
+
+.width-full{
+  width: 100%;
+}
+
+.flex__gap-200{
+  gap: 200px;
+}
+
+.flex__gap-100{
+  gap: 100px;
+}
+
+.flex__gap-50{
+  gap: 50px;
+} 
+
+.flex__gap-10{
+  gap: 10px;
+}
+
+.flex__gap-20{
+  gap: 20px;
+}
+
+.flex__gap-30{
+  gap: 30px;
+}
+
+.flex__item-end{
+  align-self: end;
+}
+
+.font-bold{
+  font-weight: bold !important;
+}
+
+.font-semi-bold{
+  font-weight: 600;
+}
+
+.wd-400{
+  width: 500px;
+}
+
+.img-50{
+  width: 50px;
+}
+
+.img-100{
+  width: 100px;
+}
+
+.img-150{
+  width: 150px;
+}
+
+.img-200{
+  width: 200px;
+}
+
+.img-250{
+  width: 250px;
+}
+
+.img-300{
+  width: 300px;
+}
+
+.img-400{
+  width: 400px;
+}
+
+.img-500{
+  width: 500px;
+}
+
+.img-600{
+width: 600px;
+}
+
+.img-800{
+  width: 800px;
+}
+
+.img > img{
+  width: 100%;
+  height: auto;
+}
+
+.text-primary-color{
+  color: var(--primary-color);
+}
+
+.text-secondary-color{
+  color: var(--secondary-color);
+}
+
+.text-white{
+  color: white !important;
+}
+
+.text-light{
+  color: #FFF5CC;
+}
+
+.text-dark{
+  color: #191C1F;
+}
+
+.text-start{
+  text-align: start;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.padding-20{
+  padding: 20px;
+}
+
+.padding-30{
+  padding: 30px;
+}
+
+
+.padding-50{
+  padding: 50px;
+}
+
+.padding-80{
+  padding: 80px;
+}
+
+.padding-100{
+  padding: 100px;
+}
+
+
+.height-40vh{
+  height: 40vh;
+}
+
+.title-main{
+  font-size: max(24px, 3vw);
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.subtitle-main{
+font-size: max(18px, 1.5vw);
+text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+line-height: 1.4;
+font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.paragraph-default{
+font-size: 18px;
+font-weight: 500;
+font-family: 'Poppins';
+}
+
+.paragraph-default > span{
+font-weight: bold;
+}
+
+.background-light{
+  background-color: #F2F2F2;
+}
+
+.background-dark{
+  background-color: #121212;
+}
+
+.background-primary-color{
+  background-color: var(--primary-color);
+}
+
+.background-secondary-color{
+  background-color: var(--secondary-color);
+}
+
+.mg-bottom-5{
+  margin-bottom: 5px;
+}
+
+.mg-bottom-40{
+  margin-bottom: 40px;
+}
+
+.zindex-3{
+  z-index: 3;
+}
+
+.title-bg-image{
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+}
+
+
+
+@media (max-width: 870px) {
+  .title-main{
+      text-align: center;
+  }
+
+  .img-300{
+      width: 200px;
+  }
+
+  .img-600{
+    width: 250px;
+  }
+
+  .img-800{
+      width: 300px;
+  }
+
+  .img-50{
+      width: 30px;
+  }
+
+  .paragraph-default{
+      font-size: 12px;
+  }
+
+  .flex__gap-50{
+      gap: 30px;
+  }
+
+  .flex__gap-100{
+      gap: 40px;
+  }
+
+  .padding-100{
+      padding: 35px;
+  }
+
+  .padding-80{
+      padding: 30px;
+  }
+  
+  .padding-50{
+      padding: 25px;
+  }
+
+  .mobile-flex__column{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  .mobile-flex__column-reverse{
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  .mobile-wd-90p{
+      width: 90%;
+  }
+
+  .mobile-justify-center{
+      justify-content: center !important;
+  }
+
+  .img-200{
+      width: 150px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px){
+  .img-300{
+      width: 200px;
+  }
+
+  .img-600{
+    width: 500px;
+  }
+  .img-800{
+      width: 600px;
+  }
+
+  .paragraph-default{
+      font-size: 14px;
+  }
+
+  .flex__gap-50{
+      gap: 30px;
+  }
+
+  .flex__gap-20{
+      gap: 10px;
+  }
+
+  .padding-50{
+      padding: 25px;
+  }
+}
