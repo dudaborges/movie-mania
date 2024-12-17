@@ -44,7 +44,7 @@
     border: none;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(134, 15, 15);
     color: white;
     transition: 0.5s;
     cursor: pointer;
@@ -54,4 +54,47 @@
 #popup-movie button:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.315);
+}
+
+.id-movie{
+    font-style: italic;
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+@media (max-width: 849px) {
+    #popup-movie{
+        flex-direction: column;
+        padding: 30px;
+        width: 90%;
+        gap: 10px;
+        height: auto;
+    }
+
+    #content-popup{
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .banner-popup{
+        width: 60%;
+        height: auto;
+    }
+
+    .banner-popup > img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+    #popup-movie{
+        width: 90%;
+    }
+
+    .banner-popup{
+        height: 85%;
+    }
 }

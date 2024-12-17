@@ -16,9 +16,8 @@
 }
 
 .pagination-btn{
-    padding: 5px;
-    font-family: 'Montserrat';
-    font-weight: 500;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
     border: none;
     border-radius: 50%;
     height: 35px;

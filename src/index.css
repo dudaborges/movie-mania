@@ -85,6 +85,10 @@ a{
   gap: 50px;
 } 
 
+.flex__gap-5{
+  gap: 5px;
+}
+
 .flex__gap-10{
   gap: 10px;
 }

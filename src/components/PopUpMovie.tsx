@@ -3,6 +3,7 @@ import '../styles/components/popup-movie.css';
 
 interface PopUpMovieProps {
   movie: {
+    id: number;
     title: string;
     poster_path: string;
     vote_average: number;
@@ -22,10 +23,8 @@ const PopUpMovie: React.FC<PopUpMovieProps> = ({ movie, onClose }) => {
         />
       </div>
       <div id="content-popup">
-        <div className="flex-center">
-          <div>
-            <img src={starIcon} alt="Avaliações" />
-          </div>
+        <div className="flex-center flex__gap-5">
+          <img src={starIcon} alt="Avaliações" />
           <span>{movie.vote_average}</span>
         </div>
         <div>
@@ -35,10 +34,9 @@ const PopUpMovie: React.FC<PopUpMovieProps> = ({ movie, onClose }) => {
           <p className="paragraph-default">
             <span>Data de lançamento:</span> {movie.release_date}
           </p>
+          <span className='id-movie'>id: {movie.id}</span>
+
         </div>
-        {/* <a href="#" target="_blank" rel="noopener noreferrer">
-          <button>Ver Trailer</button>
-        </a> */}
         <button onClick={onClose} className="btn-default">
           Fechar
         </button>
