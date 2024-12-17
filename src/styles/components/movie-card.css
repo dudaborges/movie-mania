@@ -39,3 +39,15 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+
+@media (max-width: 399px) {
+    .movie-card{
+        width: 70%;
+        height: auto;
+    }
+    .movie-card img{
+        width: 100%;
+        height: auto;
+    }
+}

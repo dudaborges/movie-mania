@@ -1,5 +1,5 @@
 .search-container {
-    width: 500px;
+    width: 40%;
     border: none;
 }
 
@@ -7,7 +7,7 @@ input#search-bar {
     width: 100%;
     height: 45px;
     padding: 0 20px;
-    font-size: 1rem;
+    font-size: max(8px, 1.7vh);
     border: 1px solid #D0CFCE;
     box-sizing: content-box;
     border-radius: 10px;
@@ -45,3 +45,27 @@ input#search-bar:focus:-ms-placeholder {
     transform: scale(1.1);
 }
 
+#part-search{
+    padding-right: 40px;
+}
+
+@media (max-width: 799px) {
+    .search-container {
+        width: 90%;
+    }
+
+    .search-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    input#search-bar::-webkit-input-placeholder{
+        opacity: 0;
+    }
+
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+    .search-container {
+        width: 50%;
+    }
+}
