@@ -10,7 +10,7 @@ function Home() {
         <source src={video} type="video/mp4" />
         Seu navegador não suporta o vídeo.
     </video>
-      <h1 className="title-main text-white">Explore o Universo do Cinema com a Gente</h1>
+      <h1 className="title-main text-white padding-50">Explore o Universo do Cinema com a Gente</h1>
       <div>
         <SearchBar/>
       </div>
