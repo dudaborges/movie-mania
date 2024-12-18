@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+### Filme Mania - Site para Exibição de Filmes e Séries 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Filme Mania** é uma aplicação web criada para amantes do cinema e séries, permitindo explorar, buscar e visualizar informações detalhadas sobre produções cinematográficas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📌 **Funcionalidades**
+- **Exibição de Filmes**  
+  Cards dinâmicos exibem as informações principais dos filmes, enquanto detalhes adicionais podem ser acessados em um pop-up ao selecioná-los.
+  
+- **Paginação**  
+  Organiza os resultados em páginas para melhorar a experiência do usuário e evitar sobrecarga de informações.
 
-## Expanding the ESLint configuration
+- **Barra de Pesquisa**  
+  Permite buscar filmes e séries por título.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Detalhamento de Filmes**  
+  Cada filme possui uma página com informações completas como título, sinopse, data de lançamento e id.
 
-- Configure the top-level `parserOptions` property like this:
+- **Design Responsivo**  
+  Funciona perfeitamente em qualquer dispositivo, adaptando-se automaticamente para desktops, tablets e smartphones.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 🚀 **Tecnologias Utilizadas**
+- **Frontend:** React.Typescript, Vite, CSS
+- **Backend:** Integração com a API do TMDB para busca de dados.
+- **Bibliotecas:** Axios (requisições HTTP).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 🎨 **Foco na Experiência do Usuário**
+- Interface clara e intuitiva, com navegação simplificada.
+- Layout moderno com uso de imagens de alta qualidade e transições suaves.
+
+---
+
+### ⚙️ **Como Executar**
+1. **Clone o repositório:**  
+   ```bash
+   git clone https://github.com/dudaborges/movie-mania/
+   cd movie-mania
+   ```
+
+2. **Instale as dependências:**  
+   ```bash
+   npm install
+   ```
+
+3. **Rode o Projeto:** 
+   ```bash
+   npm run dev
+   ```
+
+O projeto será iniciado em `http://localhost:3000`.
+
+---
+
+### Projeto Online
+
+Este projeto está disponível online no link: [https://filmemania.netlify.app/](https://filmemania.netlify.app/).
