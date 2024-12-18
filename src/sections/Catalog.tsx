@@ -4,6 +4,7 @@ import { Movie } from '../types/movie';
 import MovieCard from '../components/MovieCard';
 import PopUpMovie from '../components/PopUpMovie';
 import '../styles/sections/catalog.css';
+import Pagination from '../components/Pagination';
 
 const Catalog: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -53,24 +54,7 @@ const Catalog: React.FC = () => {
         />
       )}
     <div className='pagination-container flex-center flex__gap-10'>
-    {Array.from(Array(pages), (item, index) => {
-        return (
-            <button
-            className='pagination-btn'
-            value={index}
-            onClick={(e) => {
-                setCurrentPage(Number((e.target as HTMLButtonElement).value));
-                const section = document.getElementById('home-section');
-                if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-                }
-            }}
-            >
-            {index}
-            </button>
-        );
-    })}
-
+      <Pagination pages={pages} setCurrentPage={setCurrentPage}/>
     </div>
     </section>
   );

@@ -25,6 +25,7 @@
     cursor: pointer;
     background-color: rgb(231, 231, 231);
     transition: 0.5s;
+    color: #121212;
 }
 
 .pagination-btn:hover{
