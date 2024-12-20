@@ -10,8 +10,8 @@ const Pagination: React.FC<PaginationProps> = ({ pages, setCurrentPage }) => {
         return (
           <button
             key={index}
-            className='pagination-btn'
-            value={index}
+            className="pagination-btn"
+            value={index + 1}  
             onClick={(e) => {
               setCurrentPage(Number((e.target as HTMLButtonElement).value));
               const section = document.getElementById('home-section');

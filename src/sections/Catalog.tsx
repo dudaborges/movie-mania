@@ -7,24 +7,21 @@ import '../styles/sections/catalog.css';
 import Pagination from '../components/Pagination';
 
 const Catalog: React.FC = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);  
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null); 
   const [isPopupVisible, setPopupVisible] = useState(false); 
-  const [itensPerPage] = useState(10)
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1); 
+  const [totalPages, setTotalPages] = useState(0);  
 
-  const pages = Math.ceil(movies.length / itensPerPage) 
-  const startIndex = currentPage * itensPerPage
-  const endIndex = startIndex + itensPerPage
-  const currentMovies = movies.slice(startIndex, endIndex)
+  const getMovies = async (page: number) => {
+    const { movies, totalPages } = await fetchMovies(page);  
+    setMovies(movies);  
+    setTotalPages(totalPages); 
+  };
 
   useEffect(() => {
-    const getMovies = async () => {
-      const data = await fetchMovies();
-      setMovies(data);
-    };
-    getMovies();
-  }, []);
+    getMovies(currentPage);
+  }, [currentPage]);  
 
   const handleShowPopup = (movie: Movie) => {
     setSelectedMovie(movie);
@@ -38,7 +35,7 @@ const Catalog: React.FC = () => {
   return (
     <section id="catalog-section" className="padding-50">
       <div className="container-catalog">
-        {currentMovies.map((movie) => (
+        {movies.map((movie) => (
           <MovieCard
             key={movie.id}
             srcImg={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -53,12 +50,13 @@ const Catalog: React.FC = () => {
           onClose={handleClosePopup} 
         />
       )}
-    <div className='pagination-container flex-center flex__gap-10'>
-      <Pagination pages={pages} setCurrentPage={setCurrentPage}/>
-    </div>
+      {totalPages > 1 && (
+        <div className="pagination-container flex-center flex__gap-10">
+          <Pagination pages={totalPages} setCurrentPage={setCurrentPage} />
+        </div>
+      )}
     </section>
   );
 };
 
 export default Catalog;
-

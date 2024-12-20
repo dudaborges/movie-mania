@@ -15,7 +15,7 @@ interface PopUpMovieProps {
 
 const PopUpMovie: React.FC<PopUpMovieProps> = ({ movie, onClose }) => {
   return (
-    <div id="popup-movie" className="flex-center flex__gap-50">
+    <div id="popup-movie">
       <div className="banner-popup">
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -28,10 +28,10 @@ const PopUpMovie: React.FC<PopUpMovieProps> = ({ movie, onClose }) => {
           <span>{movie.vote_average}</span>
         </div>
         <div>
-          <h1 className="title-main">{movie.title}</h1>
-          <p className="paragraph-default">{movie.overview}</p>
+          <h1 className="title-popup">{movie.title}</h1>
+          <p className="paragraph-popup">{movie.overview}</p>
 
-          <p className="paragraph-default">
+          <p className="paragraph-popup">
             <span>Data de lançamento:</span> {movie.release_date}
           </p>
           <span className='id-movie'>id: {movie.id}</span>
