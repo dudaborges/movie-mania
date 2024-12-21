@@ -51,3 +51,4 @@ export const fetchAllMovies = async (): Promise<Movie[]> => {
     return [];
   }
 };
+

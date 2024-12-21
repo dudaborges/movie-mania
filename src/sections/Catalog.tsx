@@ -10,6 +10,7 @@ import SearchBar from '../components/SearchBar';
 const Catalog: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [filteredMovies, setFilteredMovies] = useState<Movie[]>([]);
+  const [allMovies, setAllMovies] = useState<Movie[]>([]);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,12 +22,16 @@ const Catalog: React.FC = () => {
     setTotalPages(totalPages);
   };
 
-  const handleSearch = async (query: string) => {
+  const loadAllMovies = async () => {
+    const all = await fetchAllMovies();
+    setAllMovies(all);
+  };
+
+  const handleSearch = (query: string) => {
     if (!query) {
       setFilteredMovies([]);
       return;
     }
-    const allMovies = await fetchAllMovies();
     const results = allMovies.filter((movie) =>
       movie.title.toLowerCase().includes(query.toLowerCase())
     );
@@ -35,6 +40,7 @@ const Catalog: React.FC = () => {
 
   useEffect(() => {
     getMovies(currentPage);
+    loadAllMovies();
   }, [currentPage]);
 
   const handleShowPopup = (movie: Movie) => {
@@ -47,7 +53,7 @@ const Catalog: React.FC = () => {
   };
 
   return (
-    <section id="catalog-section" className="padding-50">
+    <section className="padding-50 catalog-section">
       <div id="part-search" className="flex-center full-wd">
         <SearchBar onSearch={handleSearch} />
       </div>

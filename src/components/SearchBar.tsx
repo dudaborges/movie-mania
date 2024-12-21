@@ -1,29 +1,28 @@
 import "../styles/components/search-bar.css";
-import searchIcon from '../assets/icons/search-icon.svg';
-import { useState } from "react";
+import searchIcon from '../assets/icons/search-icon.svg'
+import { useState, useEffect } from "react";
 
 function SearchBar({ onSearch }: { onSearch: (query: string) => void }) {
   const [search, setSearch] = useState("");
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+  useEffect(() => {
     onSearch(search);
-  };
+  }, [search]);
 
   return (
-    <form className="search-container flex-center" onSubmit={handleSearch}>
+    <div className="search-container">
       <input
         type="search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         id="search-bar"
         placeholder="Busque por título"
+        autoComplete="off"
       />
-      <button type="submit" className="submit-btn">
-        Buscar
-      </button>
-    </form>
+    <img className="search-icon" src={searchIcon}/>    
+    </div>
   );
 }
 
 export default SearchBar;
+

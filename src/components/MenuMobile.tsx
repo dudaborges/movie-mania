@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; 
 import { useState } from 'react'
 import '../styles/components/menu-mobile.css'
 
@@ -27,10 +28,8 @@ function MenuMobile() {
 
       <div id="navlinks-mobile" className={`navLinks-mobile flex-center flex-column flex__gap-100 ${isActiveMenu ? 'show' : ''}`}>
         <nav className="flex-center flex-column flex__gap-30">
-            <a onClick={closeMenu}>Sobre</a>
-            <a onClick={closeMenu}>Filmes</a>
-            <a onClick={closeMenu}>Assistam em Casa</a>
-            <a onClick={closeMenu}>Filmes Populares</a>
+          <Link to="/">Todos os Filmes</Link> 
+          <Link to="/popular-movies">Filmes Populares</Link> 
         </nav>
       </div>
 
