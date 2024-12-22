@@ -2,5 +2,10 @@
 @media (max-width: 799px) {
     #home-section{
         padding-top: 70px;
+        background-color: #141414;
+    }
+
+    .video{
+        display: none;
     }
 }
