@@ -5,4 +5,12 @@
 
 #popular-title{
     margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+@media (max-width: 799px) {
+    #popular-title{
+        margin-bottom: 20px;
+        margin-top: 60px;
+    }
 }
