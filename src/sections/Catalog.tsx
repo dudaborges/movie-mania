@@ -58,9 +58,9 @@ const Catalog: React.FC = () => {
         <SearchBar onSearch={handleSearch} />
       </div>
       <div className="container-catalog">
-        {(filteredMovies.length > 0 ? filteredMovies : movies).map((movie) => (
+        {(filteredMovies.length > 0 ? filteredMovies : movies).map((movie, index) => (
           <MovieCard
-            key={movie.id}
+            key={`${movie.id}-${index}`}
             srcImg={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             title={movie.title}
             onShowPopup={() => handleShowPopup(movie)}
