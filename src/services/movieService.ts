@@ -7,7 +7,6 @@ export const fetchMovies = async (page: number): Promise<{ movies: Movie[], tota
       params: {
         language: 'pt-BR',
         page: page,
-        sort_by: 'popularity.desc',
       },
     });
 

@@ -74,7 +74,7 @@ const Catalog: React.FC = () => {
         />
       )}
       {totalPages > 1 && !filteredMovies.length && (
-        <div className="pagination-container flex-center flex__gap-10">
+        <div className="pagination-container flex-center flex__gap-10 padding-30">
           <Pagination pages={totalPages} setCurrentPage={setCurrentPage} />
         </div>
       )}

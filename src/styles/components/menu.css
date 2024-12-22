@@ -7,7 +7,6 @@
 }
 
 #menu-primary a{
-    color: white;
     padding: 5px 10px;
     cursor: pointer;
     transition: 0.5s;
@@ -33,6 +32,11 @@
     position: relative;
     text-decoration: none;
     color: inherit; 
+    color: rgb(216, 214, 214);
+}
+
+.link-animate:hover{
+    color: white;
 }
 
 .link-animate::after {
@@ -52,6 +56,11 @@
 
 #logo{
     width: 150px;
+}
+
+#part-logo{
+    position: relative;
+    z-index: 9999;
 }
 
 @media (max-width: 620px) {

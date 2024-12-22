@@ -50,7 +50,7 @@ input#search-bar:focus:-ms-placeholder {
     padding-right: 40px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 699px) {
     .search-container {
         width: 90%;
     }
@@ -58,10 +58,15 @@ input#search-bar:focus:-ms-placeholder {
     .search-icon{
         width: 20px;
         height: 20px;
+        top: -30px;
     }
 
     input#search-bar::-webkit-input-placeholder{
         opacity: 0;
+    }
+
+    input#search-bar {
+        height: 35px;
     }
 
 }

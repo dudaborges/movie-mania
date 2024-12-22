@@ -6,14 +6,16 @@ function Menu() {
   return (
     <div id='menu-primary'>
       <div id='nav-primary'>
-        <div className='flex-center flex__gap-20'>
-          <div id='logo' className='img'>
-            <img src={logoImg} alt='Filme Mania' />
-          </div>
+        <div id="part-logo" className='flex-center flex__gap-20'>
+          <Link to="/">
+            <div id='logo' className='img'>
+              <img src={logoImg} alt='Filme Mania' />
+            </div>
+          </Link>
         </div>
         <nav id='nav-links-primary' className='flex-center flex__gap-10'>
-          <Link to="/">Todos os Filmes</Link> 
-          <Link to="/popular-movies">Filmes Populares</Link> 
+          <Link className="link-animate" to="/">Todos os Filmes</Link> 
+          <Link className="link-animate" to="/popular-movies">Filmes Populares</Link> 
         </nav>
       </div>
     </div>

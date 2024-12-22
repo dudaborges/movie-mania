@@ -10,8 +10,8 @@
 }
 
 .banner-movie{
-    overflow: hidden;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .movie-card img{
@@ -29,7 +29,6 @@
 
 .content-movie-card{
     padding: 0px 15px;
-    overflow: hidden;
     width: 100%;
 }
 
@@ -41,7 +40,7 @@
 }
 
 
-@media (max-width: 399px) {
+@media (max-width: 799px) {
     .movie-card{
         width: 70%;
         height: auto;
@@ -49,5 +48,9 @@
     .movie-card img{
         width: 100%;
         height: auto;
+    }
+
+    .rating-text{
+        font-size: 14px;
     }
 }

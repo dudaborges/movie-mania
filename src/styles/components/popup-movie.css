@@ -46,7 +46,7 @@
 }
 
 .title-popup{
-    font-size: max(18px, 1.5vw);
+    font-size: max(16px, 1.5vw);
     text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
     line-height: 1.4;
 }
@@ -88,33 +88,43 @@
 }
 
 
-@media (max-width: 849px) {
+@media (max-width: 799px) {
     #popup-movie{
         flex-direction: column;
-        padding: 30px;
+        padding: 40px 10px 5px 10px;
         width: 90%;
         gap: 10px;
-        height: auto;
+        height: 100vh;
     }
 
     #content-popup{
         align-items: center;
         text-align: center;
         gap: 10px;
+        height: 50vh;
+        padding: 10px 5px;
     }
 
     .banner-popup{
-        height: 40vh;
+        height: 30vh;
+    }
+
+    .paragraph-popup{
+        font-size: 12px;
+    }
+
+    #popup-movie button {
+        padding: 5px 20px;
     }
 
 }
 
-@media (min-width: 850px) and (max-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1200px) {
     #popup-movie{
         width: 90%;
     }
 
     .banner-popup{
-        height: 85%;
+        height: 60%;
     }
 }

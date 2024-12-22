@@ -25,7 +25,7 @@ const PopUpMovie: React.FC<PopUpMovieProps> = ({ movie, onClose }) => {
       <div id="content-popup">
         <div className="flex-center flex__gap-5">
           <img src={starIcon} alt="Avaliações" />
-          <span>{movie.vote_average}</span>
+          <span className='rating-text'>{movie.vote_average}</span>
         </div>
         <div>
           <h1 className="title-popup">{movie.title}</h1>

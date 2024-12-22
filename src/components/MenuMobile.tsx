@@ -28,8 +28,8 @@ function MenuMobile() {
 
       <div id="navlinks-mobile" className={`navLinks-mobile flex-center flex-column flex__gap-100 ${isActiveMenu ? 'show' : ''}`}>
         <nav className="flex-center flex-column flex__gap-30">
-          <Link to="/">Todos os Filmes</Link> 
-          <Link to="/popular-movies">Filmes Populares</Link> 
+          <Link to="/" onClick={closeMenu}>Todos os Filmes</Link> 
+          <Link to="/popular-movies" onClick={closeMenu}>Filmes Populares</Link> 
         </nav>
       </div>
 
